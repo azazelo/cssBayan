@@ -9,6 +9,9 @@
 .main-acardion:hover{
     color: black;
 }
+.main-acardion:hover .acardion-container input:checked + label{
+    opacity: 100;
+}
 .name-acardion{
     font-size: 4em;
     text-align: center;
@@ -55,15 +58,22 @@
 .acardion-container input:checked + label + .acor-body{
     width:60%;
     height: auto;
-    color:#000;
     text-align: center;
 }
-.acardion-container label:hover +  .acardion-container input:checked + label + .acor-body {
+.acardion-container input:checked + label{
+    color: black;
+}
+.acardion-container label:hover + .acor-body {
     width:60%;
     height: auto;
     color:#000;
-    transition: transform .35s;
+    transition: all 5s ease;
 }
+.acardion-container label:hover .acardion-container label:after{
+    transition: transform .35s;
+    transform: rotate(45deg);
+   }
+
 img{
     width: 100%;
     height:100%;
